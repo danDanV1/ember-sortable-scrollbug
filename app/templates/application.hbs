@@ -1,0 +1,11 @@
+{{#sortable-group tagName="ul" model=model onChange="reorderItems" as |EmberComponentGroup|}}
+
+  {{#each model as |menuItem|}}
+    {{#sortable-item tagName="li" model=menuItem group=EmberComponentGroup handle=".handle"}}
+      <div>
+      Title: {{menuItem.id}}-{{menuItem.title}} <span class="handle">&varr;</span>
+      </div>
+    {{/sortable-item}}
+  {{/each}}
+
+  {{/sortable-group}}
